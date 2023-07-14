@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParanaBancoClienteApi", "ParanaBancoClienteApi.csproj", "{0FEA5A1A-A953-466A-9567-AA2D1C888BF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParanaBancoClienteApi_Test", "..\ParanaBancoClienteApi_Test\ParanaBancoClienteApi_Test.csproj", "{58CD2EAA-990F-41E9-B768-A26828B02A8A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FEA5A1A-A953-466A-9567-AA2D1C888BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FEA5A1A-A953-466A-9567-AA2D1C888BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FEA5A1A-A953-466A-9567-AA2D1C888BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FEA5A1A-A953-466A-9567-AA2D1C888BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58CD2EAA-990F-41E9-B768-A26828B02A8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58CD2EAA-990F-41E9-B768-A26828B02A8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58CD2EAA-990F-41E9-B768-A26828B02A8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58CD2EAA-990F-41E9-B768-A26828B02A8A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55684A01-538F-4FB6-9B4B-280B69705812}
+	EndGlobalSection
+EndGlobal
