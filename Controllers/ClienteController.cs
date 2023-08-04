@@ -20,7 +20,11 @@ namespace ParanaBancoClienteApi.Controllers
             _clienteRepositorio = clienteRepositorio;
         }
 
-
+        /// <summary>
+        /// Lista todos os Clientes.
+        /// </summary>
+        /// <returns>Uma Lista de Clientes</returns>
+        /// <response code="200">Retorna uma lista contendo todos os clientes cadastrados.</response>
         [HttpGet]
         public async Task<ActionResult<List<ClienteDTO>>> ListarTodosClientes()
         {
@@ -56,6 +60,11 @@ namespace ParanaBancoClienteApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Busca Cliente por ddd e numeroTelefone. 
+        /// </summary>
+        /// <returns>Cliente que contenha o telefone informado.</returns>
+        /// <response code="200">Retorna o cliente que contiver o DDD e o TELEFONE informado.</response>
         [HttpGet("clientes/{ddd},{numeroTelefone}")]
         public async Task<ActionResult<ClienteDTO>> BuscarClientePorTelefone(string ddd, string numeroTelefone)
         {
@@ -90,6 +99,13 @@ namespace ParanaBancoClienteApi.Controllers
             }
         }
 
+
+        /// <summary>
+        /// Cadastra um novo cliente.
+        /// </summary>
+        /// <param name="cliente">Cliente</param>
+        /// <returns>Cliente cadastrado</returns>
+        /// <response code="200">Dados do novo cliente cadastrado.</response>
         [HttpPost("clientes")]
         public async Task<ActionResult<ClienteModel>> Cadastrar([FromBody] ClienteCadastroDTO cliente)
         {
@@ -127,8 +143,15 @@ namespace ParanaBancoClienteApi.Controllers
         }
 
 
+        /// <summary>
+        /// Atualiza o e-mail do cliente. 
+        /// </summary>
+        /// <param name="email">email</param>
+        /// <param name="idCliente">codigoCliente</param>
+        /// <returns>Cliente por telefone</returns>
+        /// <response code="200">Retorna o cliente com novo email.</response>
         [HttpPut("clientes/{idCliente},{email}")]
-        public async Task<ActionResult<ClienteModel>> AtualizarEmail(int idCliente, string email)
+        public async Task<ActionResult<ClienteDTO>> AtualizarEmail(int idCliente, string email)
         {
             try
             {
@@ -160,8 +183,15 @@ namespace ParanaBancoClienteApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Atualiza o telefone de um Cliente.
+        /// </summary>
+        /// <param name="telefoneAntigo">numeroTelefoneAntigo</param>
+        /// <param name="telefoneNovo">numeroTelefoneNovo</param>
+        /// <returns>Retorna dados do cliente com telefone atualizado.</returns>
+        /// <response code="200">Atualiza o telefone do Cliente de acordo com novo telefone.</response>
         [HttpPut("clientesTelefone/{telefoneAntigo},{telefoneNovo}")]
-        public async Task<ActionResult<ClienteModel>> AtualizarTelefoneCliente(string telefoneAntigo, string telefoneNovo)
+        public async Task<ActionResult<ClienteDTO>> AtualizarTelefoneCliente(string telefoneAntigo, string telefoneNovo)
         {
             try
             {
@@ -193,8 +223,13 @@ namespace ParanaBancoClienteApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Deleta um Cliente por e-mail.
+        /// </summary>
+        /// <param name="email">email</param>
+        /// <response code="200">Cliente deletado com sucesso.</response>
         [HttpDelete("clientes/{email}")]
-        public async Task<ActionResult<ClienteModel>> Deletar(string email)
+        public async Task<ActionResult> Deletar(string email)
         {
             try
             {
