@@ -26,7 +26,7 @@ namespace ParanaBancoClienteApi
                 {
                     Version = "v1",
                     Title = "ParanaBanco-ClienteApi",
-                    Description = "ASP.NET Core Restfull Web API",
+                    Description = "V1",
                     Contact = new OpenApiContact
                     {
                         Name = "Iago Rocha",
